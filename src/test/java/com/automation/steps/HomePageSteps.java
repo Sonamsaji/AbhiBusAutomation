@@ -12,6 +12,7 @@ public class HomePageSteps {
     public void user_opens_website() throws InterruptedException {
          homePage.openWebsite();
         Thread.sleep(3000);
+        Thread.sleep(1000);
 
     }
     @Then("verify user lands on website")
