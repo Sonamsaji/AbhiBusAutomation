@@ -5,9 +5,9 @@ Feature: Verify functionalities of AbhiBus
     When user enters from and to station
     And user set date
     And click on search button
-    Then verify user is able to see the proper search results
+    Then verify user is on search result page
 
-    Scenario: user is displayed with error message when to and from station are left blank
+  Scenario: user is displayed with error message when to and from station are left blank
       Given user opens website
       Then verify user lands on website
       When user clicks on search button without entering to and from station

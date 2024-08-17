@@ -10,7 +10,7 @@ public class HomePageSteps {
     HomePage homePage = new HomePage();
 
     @Given("user opens website")
-    public void user_opens_website() {
+    public void user_opens_website()   {
         homePage.openWebsite();
     }
 
@@ -20,29 +20,28 @@ public class HomePageSteps {
     }
 
     @When("user enters from and to station")
-    public void userEntersFromAndToStation() throws InterruptedException {
+    public void userEntersFromAndToStation() {
         homePage.enterFromAndToStation();
-        Thread.sleep(5000);
     }
 
     @When("user set date")
-    public void user_set_date() {
-
+    public void user_set_date(){
+        homePage.enterDate();
     }
 
     @When("click on search button")
-    public void click_on_search_button() {
-
+    public void click_on_search_button() throws InterruptedException {
+        homePage.clickOnSearchButton();
+        Thread.sleep(3000);
     }
-
-    @Then("verify user is able to see the proper search results")
-    public void verify_user_is_able_to_see_the_proper_search_results() {
-    }
-
-
     @When("user clicks on the Careers icon in the footer")
     public void userClicksOnTheCareersIconInTheFooter() {
         homePage.scrollUntilFooter();
         homePage.userClicksCareerIcon();
+    }
+
+    @When("the user clicks on the Quick Links icon in the footer")
+    public void theUserClicksOnTheQuickLinksIconInTheFooter() {
+        homePage.scrollUntilFooter();
     }
 }
