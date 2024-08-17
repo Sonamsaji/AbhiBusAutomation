@@ -10,7 +10,6 @@ import io.cucumber.java.Scenario;
 public class Hooks {
     @Before
     public void setUp(Scenario scenario) {
-        //        System.out.println("Starting"+scenario.getName());
         ReportManager.initReporter(scenario);
         DriverManager.createDriver();
         ConfigReader.initConfig();
@@ -21,6 +20,6 @@ public class Hooks {
         if (scenario.isFailed()) {
             ReportManager.attachScreenshot();
         }
-        DriverManager.getDriver().quit();
+//        DriverManager.getDriver().quit();
     }
 }

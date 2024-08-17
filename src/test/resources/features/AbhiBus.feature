@@ -17,8 +17,7 @@ Feature: Website Functionality
     Then verify user is on the Careers page
     And user clicks on any job title
     Then verify user is on the job description page
-    Given user is on the job description page
-    When user clicks the "I'm interested" button
+    When user clicks the I'm interested button
     And fills in the required details and clicks Next
     And fills in the notice period details and clicks Submit
     Then verify the application is submitted
