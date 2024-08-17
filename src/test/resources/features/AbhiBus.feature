@@ -1,6 +1,8 @@
-Feature: Job Application and Referral Process
+Feature: Website Functionality
 
-  Background: user opens website
+  Background:
+    Given user opens website
+    Then verify user lands on website
 
 #  covers navigating to the job description page.
   Scenario: User navigates to the job description page
