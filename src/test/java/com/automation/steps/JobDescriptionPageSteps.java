@@ -21,6 +21,8 @@ public class JobDescriptionPageSteps {
     public void fillsInTheRequiredDetailsAndClicksNext() throws InterruptedException {
         Thread.sleep(6000);
         jobDescriptionPage.userFillsDetails();
+        Thread.sleep(4000);
+        jobDescriptionPage.clickNextButton();
     }
 
     @And("fills in the notice period details and clicks Submit")

@@ -44,6 +44,10 @@ public class JobDescriptionPage extends BasePage{
         lastName.sendKeys("na");
         email.sendKeys("so@na3.com");
         confirmEmail.sendKeys("so@na3.com");
+//        nextButton.click();
+    }
+
+    public void clickNextButton(){
         nextButton.click();
     }
 

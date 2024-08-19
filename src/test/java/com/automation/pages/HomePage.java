@@ -36,6 +36,18 @@ public class HomePage extends BasePage {
     @FindBy(id = "carreers-link")
     WebElement careerIcon;
 
+    //locator for quick links
+    @FindBy(xpath = "//button[text()=\"Quick Links\"]")
+    WebElement quickLink;
+
+    //locator for clicking cancel booking
+    @FindBy(xpath = "//*[@id=\"footer-routes\"]//div[5]/a")
+    WebElement cancelBooking;
+
+    //locator for FAQ icon
+    @FindBy(xpath = "//a[text()='FAQ']")
+    WebElement faq;
+
     public int monthNumber(){
         int c=0;
         String [] listOfMonth={"January","February","March","April","May","June","July","August","September","October","November","December"};
@@ -72,9 +84,11 @@ public class HomePage extends BasePage {
         WebElement date=driver.findElement(By.xpath(dateXpath));
         date.click();
     }
+
     public void clickOnSearchButton(){
         searchButton.click();
     }
+
     public void userClicksCareerIcon() {
         careerIcon.click();
     }
@@ -86,4 +100,15 @@ public class HomePage extends BasePage {
         js.executeScript("arguments[0].click();", footerText);
     }
 
+    public void clickQuickLinks() {
+       quickLink.click();
+    }
+
+    public void userCancelBooking(){
+        cancelBooking.click();
+    }
+
+    public void userClicksFAQ() {
+        faq.click();
+    }
 }

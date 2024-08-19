@@ -11,6 +11,8 @@ Feature: Website Functionality
     And user clicks on any job title
     Then verify user is on the job description page
 
+
+#Not working
 #  focuses on the job application process after landing on the job description page.
   Scenario: User applies for a job
     When user clicks on the Careers icon in the footer
@@ -21,7 +23,7 @@ Feature: Website Functionality
     And fills in the required details and clicks Next
     And fills in the notice period details and clicks Submit
     Then verify the application is submitted
-
+#Not Working
 #  introduces an additional action: referring a friend for the job, which is commonly available on job portals.
   Scenario: User refers a friend for a job
     When user clicks on the Careers icon in the footer
@@ -37,19 +39,22 @@ Feature: Website Functionality
 #  Add scenario to validate cancel ticket functionality with invalid data
   Scenario: Validate cancel ticket with invalid data
     When the user clicks on the Quick Links icon in the footer
-    And the user clicks on the "Cancel Booking" option
+    And the user clicks on the Cancel Booking option
     Then verify the user is on the Cancel Booking page
-    And the user enters an invalid "booking.id" and "mobile.number"
+    And the user enters an invalid "ticketNumber" and "phoneNumber"
     Then verify an appropriate error message is displayed to the user
 
 #  chatbot box loads successfully when accessed from the Cancel Booking page.
   Scenario: Validate chatbot functionality on the Cancel Booking page
     When the user clicks on the Quick Links icon in the footer
-    And the user clicks on the "Cancel Booking" option
+    And the user clicks on the Cancel Booking option
     Then verify the user is on the Cancel Booking page
+    And the user enters an invalid "ticketNumber" and "phoneNumber"
+    Then verify an appropriate error message is displayed to the user
     When the user clicks the chatbot icon
     Then verify the chatbot box loads successfully
 
+#    Not Working
 #  Scenario verifies that clicking the dropdown symbol for a specific FAQ item results in the symbol being in the active or expanded state.
   Scenario: Validate FAQ item expansion on the FAQ page
     When the user clicks on the FAQ icon in the footer
@@ -59,7 +64,7 @@ Feature: Website Functionality
 
 #  Scenario checks that the correct confirmation message is displayed after clicking the "Copy Code" icon on an offer detail page.
   Scenario: Apply discount offer on bus ticket booking
-    When the user clicks on "Offers" from the navigation menu
+    When the user clicks on Offers from the navigation menu
     And the user selects any offer option
     Then verify the offer details are displayed
     And the user clicks "View Details" for the selected offer

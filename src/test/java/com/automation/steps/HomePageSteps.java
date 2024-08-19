@@ -1,6 +1,7 @@
 package com.automation.steps;
 
 import com.automation.pages.HomePage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -43,5 +44,18 @@ public class HomePageSteps {
     @When("the user clicks on the Quick Links icon in the footer")
     public void theUserClicksOnTheQuickLinksIconInTheFooter() {
         homePage.scrollUntilFooter();
+        homePage.clickQuickLinks();
+
+    }
+
+    @And("the user clicks on the Cancel Booking option")
+    public void theUserClicksOnTheCancelBookingOption() {
+        homePage.userCancelBooking();
+    }
+
+    @When("the user clicks on the FAQ icon in the footer")
+    public void theUserClicksOnTheFAQIconInTheFooter() {
+        homePage.scrollUntilFooter();
+        homePage.userClicksFAQ();
     }
 }
