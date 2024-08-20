@@ -5,6 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HomePage extends BasePage {
 
@@ -47,6 +51,10 @@ public class HomePage extends BasePage {
     //locator for FAQ icon
     @FindBy(xpath = "//a[text()='FAQ']")
     WebElement faq;
+
+    //locator for clicking Offers Icon
+    @FindBy(id = "offers-link")
+    WebElement offers;
 
     public int monthNumber(){
         int c=0;
@@ -110,5 +118,15 @@ public class HomePage extends BasePage {
 
     public void userClicksFAQ() {
         faq.click();
+    }
+
+    public void userClicksOffersIcon() {
+        offers.click();
+    }
+
+    public void userClicksTrains() {
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"train-link\"]"));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
     }
 }

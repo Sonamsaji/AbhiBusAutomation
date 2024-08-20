@@ -58,4 +58,14 @@ public class HomePageSteps {
         homePage.scrollUntilFooter();
         homePage.userClicksFAQ();
     }
+
+    @When("the user clicks on Offers from the navigation menu")
+    public void theUserClicksOnOffersFromTheNavigationMenu() {
+        homePage.userClicksOffersIcon();
+    }
+
+    @When("the user clicks on Trains from the navigation menu")
+    public void theUserClicksOnTrainsFromTheNavigationMenu() {
+        homePage.userClicksTrains();
+    }
 }
