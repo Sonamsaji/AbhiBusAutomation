@@ -11,7 +11,7 @@ public class FAQPageSteps {
 
     @Then("verify user lands on FAQ page")
     public void verifyUserLandsOnFAQPage() {
-        Assert.assertEquals(faqPage.onFAQPage(),"FAQ");
+        Assert.assertEquals(faqPage.onFAQPage(), "FAQ");
     }
 
     @When("the user clicks the keydown symbol for a specific FAQ item")

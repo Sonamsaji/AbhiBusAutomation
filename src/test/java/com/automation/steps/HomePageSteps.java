@@ -11,7 +11,7 @@ public class HomePageSteps {
     HomePage homePage = new HomePage();
 
     @Given("user opens website")
-    public void user_opens_website()   {
+    public void user_opens_website() {
         homePage.openWebsite();
     }
 
@@ -26,7 +26,7 @@ public class HomePageSteps {
     }
 
     @When("user set date")
-    public void user_set_date(){
+    public void user_set_date() {
         homePage.enterDate();
     }
 
@@ -35,6 +35,7 @@ public class HomePageSteps {
         homePage.clickOnSearchButton();
         Thread.sleep(3000);
     }
+
     @When("user clicks on the Careers icon in the footer")
     public void userClicksOnTheCareersIconInTheFooter() {
         homePage.scrollUntilFooter();

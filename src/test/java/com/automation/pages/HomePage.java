@@ -24,13 +24,13 @@ public class HomePage extends BasePage {
     @FindBy(id = "search-button")
     WebElement searchButton;
 
-    @FindBy(xpath="//input[@placeholder='Onward Journey Date']")
+    @FindBy(xpath = "//input[@placeholder='Onward Journey Date']")
     WebElement dateInputField;
 
-    @FindBy(xpath="//div[2]/div[1]/div[2]/span[1]")
+    @FindBy(xpath = "//div[2]/div[1]/div[2]/span[1]")
     WebElement month;
 
-    @FindBy(xpath="//div[1]/div[2]/span[2]")
+    @FindBy(xpath = "//div[1]/div[2]/span[2]")
     WebElement year;
 
     @FindBy(xpath = "//div[@class=' col auto'][2]/span[@class='calender-month-change']")
@@ -56,44 +56,50 @@ public class HomePage extends BasePage {
     @FindBy(id = "offers-link")
     WebElement offers;
 
-    public int monthNumber(){
-        int c=0;
-        String [] listOfMonth={"January","February","March","April","May","June","July","August","September","October","November","December"};
-        for(int i=0;i<listOfMonth.length;i++){
-            if(ConfigReader.getConfigValue("month").equals(listOfMonth[i])) {
+    //locator for clicking trains icon on navigation bar
+    @FindBy(xpath = "//a[@id='train-link']/span[text()='Trains']")
+    WebElement train;
+
+    public int monthNumber() {
+        int c = 0;
+        String[] listOfMonth = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        for (int i = 0; i < listOfMonth.length; i++) {
+            if (ConfigReader.getConfigValue("month").equals(listOfMonth[i])) {
                 c = i + 1;
                 break;
             }
         }
         return c;
     }
+
     public void openWebsite() {
         driver.get(ConfigReader.getConfigValue("url"));
 
     }
-    public void enterFromAndToStation(){
+
+    public void enterFromAndToStation() {
         fromStation.click();
-        String fromCity="//div[text()='"+ConfigReader.getConfigValue("fromStation")+"']";
+        String fromCity = "//div[text()='" + ConfigReader.getConfigValue("fromStation") + "']";
         driver.findElement(By.xpath(fromCity)).click();
         toStation.click();
-        String toCity="//div[text()='"+ConfigReader.getConfigValue("toStation")+"']";
+        String toCity = "//div[text()='" + ConfigReader.getConfigValue("toStation") + "']";
         driver.findElement(By.xpath(toCity)).click();
 
     }
-    public void enterDate(){
+
+    public void enterDate() {
 
         dateInputField.click();
-        while(!month.getText().equals(ConfigReader.getConfigValue("month")))
-        {
+        while (!month.getText().equals(ConfigReader.getConfigValue("month"))) {
             forwardChangeOfMonth.click();
         }
 
-        String dateXpath="//div[2]/span[@data-date='"+ConfigReader.getConfigValue("day")+"' and @data-month='"+monthNumber()+"']";
-        WebElement date=driver.findElement(By.xpath(dateXpath));
+        String dateXpath = "//div[2]/span[@data-date='" + ConfigReader.getConfigValue("day") + "' and @data-month='" + monthNumber() + "']";
+        WebElement date = driver.findElement(By.xpath(dateXpath));
         date.click();
     }
 
-    public void clickOnSearchButton(){
+    public void clickOnSearchButton() {
         searchButton.click();
     }
 
@@ -109,24 +115,26 @@ public class HomePage extends BasePage {
     }
 
     public void clickQuickLinks() {
-       quickLink.click();
+        quickLink.click();
     }
 
-    public void userCancelBooking(){
+    public void userCancelBooking() {
         cancelBooking.click();
     }
 
     public void userClicksFAQ() {
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
         faq.click();
     }
 
     public void userClicksOffersIcon() {
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
         offers.click();
     }
 
     public void userClicksTrains() {
-        WebElement element = driver.findElement(By.xpath("//*[@id=\"train-link\"]"));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", element);
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+        clickByUsingJS(train);
     }
+
 }

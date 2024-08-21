@@ -24,7 +24,7 @@ public class CancelBookingSteps {
 
     @Then("verify an appropriate error message is displayed to the user")
     public void verifyAnAppropriateErrorMessageIsDisplayedToTheUser() {
-        Assert.assertEquals(cancelBookingPage.isErrorMessageDisplayed(),ConfigReader.getConfigValue("error"));
+        Assert.assertEquals(cancelBookingPage.isErrorMessageDisplayed(), ConfigReader.getConfigValue("error"));
     }
 
     @When("the user clicks the chatbot icon")
@@ -35,6 +35,6 @@ public class CancelBookingSteps {
 
     @Then("verify the chatbot box loads successfully")
     public void verifyTheChatbotBoxLoadsSuccessfully() {
-        Assert.assertEquals(cancelBookingPage.isChatBotVisible(),ConfigReader.getConfigValue("chatterbox"));
+        Assert.assertEquals(cancelBookingPage.isChatBotVisible(), ConfigReader.getConfigValue("chatterbox"));
     }
 }

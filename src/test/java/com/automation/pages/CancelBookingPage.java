@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CancelBookingPage extends BasePage{
+public class CancelBookingPage extends BasePage {
 
     //locator for getting cancel Ticket Text
     @FindBy(xpath = "//div[@class=\"jrnytye\"]//h1")
@@ -36,7 +36,6 @@ public class CancelBookingPage extends BasePage{
     //locator for getting chatbot box text
     @FindBy(xpath = "//*[@id='chat-window-wrapper']/div/div[1]/div[1]/span")
     WebElement botText;
-
 
     public String userIsOnTheCancelBookingPage() {
         return cancelText.getText();

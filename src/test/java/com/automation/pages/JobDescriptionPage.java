@@ -3,7 +3,7 @@ package com.automation.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class JobDescriptionPage extends BasePage{
+public class JobDescriptionPage extends BasePage {
     //locator for interested button
     @FindBy(id = "st-apply")
     WebElement interestedButton;
@@ -29,7 +29,7 @@ public class JobDescriptionPage extends BasePage{
     @FindBy(id = "noPolicy")
     WebElement checkbox;
     //locator for submit Button
-    @FindBy(xpath="//button[@data-test=\"footer-submit\"]")
+    @FindBy(xpath = "//button[@data-test=\"footer-submit\"]")
     WebElement submit;
     //locator for successful message
     @FindBy(xpath = "//h2")
@@ -47,7 +47,7 @@ public class JobDescriptionPage extends BasePage{
 //        nextButton.click();
     }
 
-    public void clickNextButton(){
+    public void clickNextButton() {
         nextButton.click();
     }
 
