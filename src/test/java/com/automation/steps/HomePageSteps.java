@@ -1,5 +1,6 @@
 package com.automation.steps;
 
+import com.automation.pages.CareerPage;
 import com.automation.pages.HomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -9,6 +10,7 @@ import org.junit.Assert;
 
 public class HomePageSteps {
     HomePage homePage = new HomePage();
+    CareerPage careerPage = new CareerPage();
 
     @Given("user opens website")
     public void user_opens_website() {
@@ -68,5 +70,11 @@ public class HomePageSteps {
     @When("the user clicks on Trains from the navigation menu")
     public void theUserClicksOnTrainsFromTheNavigationMenu() {
         homePage.userClicksTrains();
+    }
+    @When("the user clicks on the RSRTC icon")
+    public void the_user_clicks_on_the_rsrtc_icon() {
+        homePage.scrollRSTC();
+        homePage.userClicksRSRTC();
+        careerPage.userSwitchToJobDescriptionPage();
     }
 }

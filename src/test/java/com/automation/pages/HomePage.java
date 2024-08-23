@@ -6,9 +6,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class HomePage extends BasePage {
 
@@ -17,9 +14,6 @@ public class HomePage extends BasePage {
 
     @FindBy(id = "search-to")
     WebElement toStation;
-
-    @FindBy(id = "bi-direction")
-    WebElement swapButton;
 
     @FindBy(id = "search-button")
     WebElement searchButton;
@@ -59,6 +53,14 @@ public class HomePage extends BasePage {
     //locator for clicking trains icon on navigation bar
     @FindBy(xpath = "//a[@id='train-link']/span[text()='Trains']")
     WebElement train;
+
+    //locator for loading bus booking container loads
+    @FindBy(id = "srtc-container")
+    WebElement busContainerLoading;
+
+    //locator for clicking RSRTC
+    @FindBy(xpath = "//div[@id='operator-container']//h3[text()='RSRTC']")
+    WebElement RSRTC;
 
     public int monthNumber() {
         int c = 0;
@@ -136,5 +138,12 @@ public class HomePage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(searchButton));
         clickByUsingJS(train);
     }
-
+    public void scrollRSTC() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", busContainerLoading);
+        js.executeScript("arguments[0].click();", busContainerLoading);
+    }
+    public void userClicksRSRTC() {
+        RSRTC.click();
+    }
 }

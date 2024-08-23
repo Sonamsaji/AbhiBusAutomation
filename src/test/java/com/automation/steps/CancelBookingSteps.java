@@ -7,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CancelBookingSteps {
 
@@ -30,7 +31,6 @@ public class CancelBookingSteps {
     @When("the user clicks the chatbot icon")
     public void theUserClicksTheChatbotIcon() throws InterruptedException {
         cancelBookingPage.clicksChatBot();
-        Thread.sleep(5000);
     }
 
     @Then("verify the chatbot box loads successfully")

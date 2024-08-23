@@ -5,6 +5,7 @@ import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CancelBookingPage extends BasePage {
 
@@ -28,8 +29,7 @@ public class CancelBookingPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"txtCanc\"]/div")
     WebElement errorText;
 
-
-    //locator for clicking chat bot
+    //locator for loading chatbot box
     @FindBy(className = "verloop-button")
     WebElement chatBot;
 
@@ -53,12 +53,15 @@ public class CancelBookingPage extends BasePage {
     }
 
     public void clicksChatBot() {
+        wait.until(ExpectedConditions.elementToBeClickable(chatBot));
         chatBot.click();
     }
 
     public String isChatBotVisible() {
+
         // Switch to the iframe using its XPath
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='verloop-iframe']")));
+        wait.until(ExpectedConditions.elementToBeClickable(botText));
         return botText.getText();
     }
 }

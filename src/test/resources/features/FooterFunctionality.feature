@@ -31,3 +31,5 @@ Feature: Footer Functionality
     Then verify user lands on FAQ page
     When the user clicks the keydown symbol for a specific FAQ item
     Then keydown symbol should be in the active or expanded state
+
+

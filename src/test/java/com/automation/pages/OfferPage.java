@@ -7,13 +7,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class OfferPage extends BasePage {
 
     //locator for clicking first view details option
-    @FindBy(xpath = "//*[@id=\"offer-cards-tab-details\"]/div[1]/div[2]/div[2]/a/span")
+    @FindBy(xpath = "//a[contains(@class, 'btn') and contains(@class, 'filled') and contains(@class, 'primary') and contains(@class, 'sm') and contains(@class, 'inactive')]/span[text()='View Details']")
     WebElement viewDetails;
     //locator for clicking copy code
-    @FindBy(xpath = "//div[@class=\" col s6 m6 l6\"]//button")
+    @FindBy(css = "button.btn.filled.primary.md.inactive.button[data-code='ABHIFIRST']")
     WebElement copyCode;
     //locator for getting code copied message
-    @FindBy(className = "row text-success")
+    @FindBy(xpath = "//div[@class='row text-success']")
     WebElement codeCopiedMessage;
     //locator for loading whole container
     @FindBy(id = "search-container")

@@ -8,13 +8,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class FAQPage extends BasePage {
 
     //locator for
-    @FindBy(xpath = "//*[@id=\"Faqs-data\"]/div")
+    @FindBy(css = "div.row.collapsible-header > div.col")
     WebElement faqData;
     //locator for FAQ text
-    @FindBy(xpath = "//div[@class=\"container card   md \"]//h5")
+    @FindBy(css = "div.row.card-header.lighter > h5\n")
     WebElement faqText;
     //locator for content inside faq
-    @FindBy(xpath = "//div[@class=\"row collapsible-body \"]")
+    @FindBy(css = ".collapsible-body")
     WebElement faqContent;
     //locator for whole faq box to load
     @FindBy(className = "faq")
