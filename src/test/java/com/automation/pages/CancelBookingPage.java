@@ -1,7 +1,6 @@
 package com.automation.pages;
 
 import com.automation.utils.ConfigReader;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -53,7 +52,10 @@ public class CancelBookingPage extends BasePage {
     }
 
     public void clicksChatBot() {
-        wait.until(ExpectedConditions.elementToBeClickable(chatBot));
+        while(!chatBot.isDisplayed()){
+            driver.navigate().refresh();
+        }
+        //wait.until(ExpectedConditions.elementToBeClickable(chatBot));
         chatBot.click();
     }
 

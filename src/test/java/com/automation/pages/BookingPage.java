@@ -34,7 +34,7 @@ public class BookingPage extends BasePage{
     @FindBy(css = "button.btn.bus-info-btn.filled.primary.sm.inactive.button")
     WebElement hideSeats ;
     //locator for getting seat container
-    @FindBy(xpath = "//*[@id=\"seating-container\"]/div[3]")
+    @FindBy(id = "seating-container")
     WebElement  seatContainer;
     //locator for selecting a seat
     @FindBy(xpath = "//div[@class='container  ']//table//td[2]")
