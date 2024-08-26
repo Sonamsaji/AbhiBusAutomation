@@ -102,6 +102,10 @@ public class BookingPage extends BasePage{
     }
 
     public boolean verifySeatDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(seatContainer));
+        return isDisplayed(seatContainer);
+    }
+    public boolean verifySeatNotDisplayed() {
         return isDisplayed(seatContainer);
     }
 

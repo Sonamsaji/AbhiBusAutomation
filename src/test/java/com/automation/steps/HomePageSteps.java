@@ -19,7 +19,7 @@ public class HomePageSteps {
 
     @Then("verify user lands on website")
     public void verify_user_lands_on_website() {
-        Assert.assertTrue(true);
+        Assert.assertTrue(homePage.isUserOnHomePage());
     }
 
     @When("user enters from and to station")
@@ -33,10 +33,55 @@ public class HomePageSteps {
     }
 
     @When("click on search button")
-    public void click_on_search_button() throws InterruptedException {
+    public void click_on_search_button() {
         homePage.clickOnSearchButton();
-        Thread.sleep(3000);
+
     }
+
+    @And("user clicks on swap button")
+    public void userClicksOnSwapButton() {
+        homePage.clickOnSwapStationButton();
+    }
+
+    @Then("verify the to and from station places are swapped")
+    public void verifyTheToAndFromStationPlacesAreSwapped() {
+        Assert.assertTrue(homePage.areStationSwapped());
+
+    }
+
+
+    @When("user clicks on today")
+    public void userClicksOnToday() {
+        homePage.clickOnTodayButton();
+    }
+
+    @Then("verify todays date is displayed")
+    public void verifyTodaysDateIsDisplayed() {
+        Assert.assertTrue(homePage.isTodayDateDisplayed());
+    }
+
+    @When("user clicks on tomorrow")
+    public void userClicksOnTomorrow() {
+        homePage.clickOnTomorrowButton();
+    }
+
+    @Then("verify tomorrows date is displayed")
+    public void verifyTomorrowsDateIsDisplayed() {
+
+        Assert.assertTrue(homePage.isTomorrowDateDisplayed());
+
+    }
+
+    @Then("verify user is displayed with error message for not entering station")
+    public void verifyUserIsDisplayedWithErrorMessageForNotEnteringStation() {
+        Assert.assertTrue(homePage.isSearchErrorMessageDisplayed());
+    }
+
+//    @When("click on search button")
+//    public void click_on_search_button() throws InterruptedException {
+//        homePage.clickOnSearchButton();
+//        Thread.sleep(3000);
+//    }
 
     @When("user clicks on the Careers icon in the footer")
     public void userClicksOnTheCareersIconInTheFooter() {

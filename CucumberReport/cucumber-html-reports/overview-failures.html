@@ -77,7 +77,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>CucumberAutomation</td>
               <td>1</td>
-            <td>26 Aug 2024, 14:34</td>
+            <td>26 Aug 2024, 15:48</td>
     </tr>
   </tbody>
 </table>
@@ -129,7 +129,7 @@ $(document).ready(function() {
     
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verify seat booking functionality on RSRTC page</span>
+  <span class="name">Verify booking functionality</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -159,7 +159,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">2s 724ms</span>
+  <span class="lead-duration duration">1s 892ms</span>
 
           </div>
 
@@ -194,7 +194,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">the user clicks on the RSRTC icon</span>
   
-  <span class="lead-duration duration">228ms</span>
+  <span class="lead-duration duration">176ms</span>
 
   </div>
 
@@ -215,7 +215,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify the user is on the RSRTC page</span>
   
-  <span class="lead-duration duration">11s 025ms</span>
+  <span class="lead-duration duration">4s 023ms</span>
 
   </div>
 
@@ -236,7 +236,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">the user clicks on the select date option and selects a date</span>
   
-  <span class="lead-duration duration">881ms</span>
+  <span class="lead-duration duration">893ms</span>
 
   </div>
 
@@ -257,7 +257,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify the user is getting results for the selected date</span>
   
-  <span class="lead-duration duration">3s 151ms</span>
+  <span class="lead-duration duration">2s 194ms</span>
 
   </div>
 
@@ -278,7 +278,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">the user clicks on the Show Seats option</span>
   
-  <span class="lead-duration duration">155ms</span>
+  <span class="lead-duration duration">079ms</span>
 
   </div>
 
@@ -296,10 +296,10 @@ $(document).ready(function() {
           <div class="step">
         
 <div class="brief failed">
-  <span class="keyword indention">Then</span>
-  <span class="name">verify the seats are displayed</span>
+  <span class="keyword indention">When</span>
+  <span class="name">the user selects a seat and clicks the continue button</span>
   
-  <span class="lead-duration duration">1s 443ms</span>
+  <span class="lead-duration duration">11s 759ms</span>
 
   </div>
 
@@ -311,12 +311,37 @@ $(document).ready(function() {
           <a>Error message</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at com.automation.steps.BookingPageSteps.verify_the_seats_are_displayed(BookingPageSteps.java:33)
-	at &#10045;.verify the seats are displayed(file:///C:/Users/280681/Downloads/ScrollAndSwipe/AbhiBus/src/test/resources/features/BookingFunctionality.feature:31)
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()='Continue']&quot;}
+  (Session info: chrome=128.0.6613.84)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.22.0', revision: 'c5f3146703*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [137b1babe692a887f156d1feb7e80453, findElement {value=//div[text()='Continue'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.84, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\280681\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54474}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54474/devtoo..., se:cdpVersion: 128.0.6613.84, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 137b1babe692a887f156d1feb7e80453
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy21.click(Unknown Source)
+	at com.automation.pages.BookingPage.clickContinueButton(BookingPage.java:135)
+	at com.automation.steps.BookingPageSteps.the_user_selects_a_seat_and_clicks_the_continue_button(BookingPageSteps.java:52)
+	at &#10045;.the user selects a seat and clicks the continue button(file:///C:/Users/280681/Downloads/ScrollAndSwipe/AbhiBus/src/test/resources/features/BookingFunctionality.feature:41)
 </pre>
       </div>
     </div>
@@ -334,8 +359,50 @@ $(document).ready(function() {
           <div class="step">
         
 <div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">fills in the trip details and billing address</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">clicks on the continue to pay button</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">the user selects a seat and check whether the seat is booked or not</span>
+  <span class="name">verify the payment page is loading</span>
   
   <span class="lead-duration duration">000ms</span>
 
@@ -376,7 +443,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">718ms</span>
+  <span class="lead-duration duration">511ms</span>
 
           </div>
 
@@ -388,13 +455,202 @@ $(document).ready(function() {
                 <div class="embedding indention">
         <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_1995935220.png" target="_blank">
+      <a href="embeddings/embedding_1231390187.png" target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-6" class="collapse collapsable-details">
       <span class="embedding-content">
-        <img src="embeddings/embedding_1995935220.png">
+        <img src="embeddings/embedding_1231390187.png">
+      </span>
+    </div>
+  </div>
+        </div>
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-FilterAndSort-feature.html">Validation of bus search filters</a>
+    </div>
+  
+  
+<div class="tags indention">
+  </div>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">validation of sort by arrival time</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-8">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-8" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp(io.cucumber.java.Scenario)</span>
+                        
+  <span class="lead-duration duration">1s 765ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user clicks on sort by arrival time</span>
+  
+  <span class="lead-duration duration">099ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify buses are sorted by its arrival time</span>
+  
+  <span class="lead-duration duration">1s 349ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Error message</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.automation.steps.BusSearchResultPageSteps.verifyBusesAreSortedByItsArrivalTime(BusSearchResultPageSteps.java:71)
+	at &#10045;.verify buses are sorted by its arrival time(file:///C:/Users/280681/Downloads/ScrollAndSwipe/AbhiBus/src/test/resources/features/FilterAndSort.feature:35)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-11" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp(io.cucumber.java.Scenario)</span>
+                        
+  <span class="lead-duration duration">518ms</span>
+
+          </div>
+
+                      
+
+          
+          
+    <div class="embeddings inner-level">
+                <div class="embedding indention">
+        <div data-toggle="collapse" data-target="#embedding-12" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_26496693.png" target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-12" class="collapse collapsable-details">
+      <span class="embedding-content">
+        <img src="embeddings/embedding_26496693.png">
       </span>
     </div>
   </div>

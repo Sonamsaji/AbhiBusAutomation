@@ -38,7 +38,7 @@ public class BookingPageSteps {
     }
     @Then("verify the seats are hidden")
     public void verify_the_seats_are_hidden() {
-        Assert.assertFalse(bookingPage.verifySeatDisplayed());
+        Assert.assertFalse(bookingPage.verifySeatNotDisplayed());
 //        bookingPage.verifySeatIsHidden();
     }
 
