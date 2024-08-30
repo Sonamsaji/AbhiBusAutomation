@@ -1,5 +1,6 @@
-package com.automation.pages;
+package com.automation.pages.web;
 
+import com.automation.pages.interfaces.HomePage;
 import com.automation.utils.ConfigReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.time.LocalDate;
 
-public class HomePage extends BasePage {
+public class HomePageWeb extends BasePage implements HomePage {
 
 
     //locator for CareerIcon

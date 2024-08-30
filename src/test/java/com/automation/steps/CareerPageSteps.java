@@ -1,7 +1,6 @@
 package com.automation.steps;
 
-import com.automation.pages.CareerPage;
-import com.automation.pages.JobDescriptionPage;
+import com.automation.pages.web.CareerPage;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;

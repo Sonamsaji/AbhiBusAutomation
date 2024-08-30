@@ -1,13 +1,11 @@
 package com.automation.steps;
 
-import com.automation.pages.CancelBookingPage;
+import com.automation.pages.web.CancelBookingPage;
 import com.automation.utils.ConfigReader;
-import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CancelBookingSteps {
 

@@ -1,11 +1,11 @@
-package com.automation.pages;
+package com.automation.pages.web;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class BookingPage extends BasePage{
+public class BookingPage extends BasePage {
     //locator for RSRTC text
     @FindBy(xpath = "//ul[@class='breadcrumb']//li[text()='RSRTC']")
     WebElement rsrtcText;

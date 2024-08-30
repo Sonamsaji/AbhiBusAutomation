@@ -1,6 +1,6 @@
 package com.automation.steps;
 
-import com.automation.pages.TrainsPage;
+import com.automation.pages.web.TrainsPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
